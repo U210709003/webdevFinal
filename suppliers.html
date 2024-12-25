@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Supplier Management</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suppliers.html">Supplier Management</a></li>
+        <li><a href="purchases.html">Purchases</a></li>
+        <li><a href="categories.html">Product Categories</a></li>
+        <li><a href="inventory.html">Inventory Management</a></li>
+        <li><a href="sales.html">Sales Management</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Manage Suppliers</h2>
+    <p>Here you can view, add, update, and manage supplier information.</p>
+
+   
+    <form id="addSupplierForm">
+      <input type="text" id="id" placeholder="ID" required>
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="contact" placeholder="Contact Number" required>
+      <input type="text" id="location" placeholder="Location" required>
+      <button type="submit">Add Supplier</button>
+    </form>
+
+    
+    <div id="filterSection">
+      <h3>Search and Filter</h3>
+      <input type="text" id="searchName" placeholder="Search by Name">
+      <input type="text" id="searchLocation" placeholder="Search by Location">
+      <button id="filterButton">Filter</button>
+      <button id="clearFilterButton">Clear Filters</button>
+    </div>
+
+  
+    <button id="viewSuppliersButton">View Suppliers</button>
+
+   
+    <div id="supplierList" style="display: none;"></div>
+
+  
+    <button id="resetButton">Reset to Original Data</button>
+  </main>
+  <footer>
+    <p>© 2024 Blueberry Factory Management System</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

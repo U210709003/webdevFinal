@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Purchase Management</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suppliers.html">Supplier Management</a></li>
+        <li><a href="purchases.html">Purchases</a></li>
+        <li><a href="categories.html">Product Categories</a></li>
+        <li><a href="inventory.html">Inventory Management</a></li>
+        <li><a href="sales.html">Sales Management</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Manage Purchases</h2>
+    <p>Here you can log, view, sort, and summarize purchase records.</p>
+
+    
+    <form id="addPurchaseForm">
+      <input type="text" id="purchaseId" placeholder="Purchase ID (unique)" required>
+      <input type="text" id="farmerId" placeholder="Farmer (Supplier) ID" required>
+      <input type="date" id="purchaseDate" required>
+      <input type="number" id="quantity" placeholder="Quantity (kg)" required>
+      <input type="number" id="pricePerKg" placeholder="Price per kg ($)" required>
+      <button type="submit">Add New Purchase</button>
+    </form>
+
+  
+    <button id="viewPurchasesButton">View Purchases</button>
+
+   
+    <div id="filterSection" style="display: none;">
+      <h3>Filter and Sort Purchases</h3>
+      <input type="text" id="searchFarmerId" placeholder="Search by Farmer ID">
+      <input type="date" id="filterStartDate" placeholder="Start Date">
+      <input type="date" id="filterEndDate" placeholder="End Date">
+      <button id="sortDateButton">Sort by Date</button>
+      <button id="sortAmountButton">Sort by Total Cost</button>
+      <button id="sortFarmerButton">Sort by Farmer ID</button>
+      <button id="clearFiltersButton">Clear Filters</button>
+    </div>
+
+
+    <div id="purchaseList" style="display: none;"></div>
+
+  
+    <div id="summarySection" style="display: none;">
+      <h3>Generate Purchase Summaries</h3>
+      <button id="generateSummaryButton">Generate Summary</button>
+      <div id="summaryOutput"></div>
+    </div>
+
+    
+    <div id="expenseCalculation">
+      <h3>Expense Calculation</h3>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate">
+      <button id="generateReportButton">Generate Report</button>
+    </div>
+
+    <div id="expenseReport">
+      <h3>Expense Report</h3>
+      <div id="reportOutput"></div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Blueberry Factory Management System</p>
+  </footer>
+  <script src="purchases.js" defer></script>
+</body>
+</html>

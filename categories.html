@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Categorization and Logistics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Product Categorization and Logistics</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="suppliers.html">supplier management</a></li>
+        <li><a href="purchases.html">purchases</a></li>
+        <li><a href="categories.html">product categories</a></li>
+        <li><a href="inventory.html">inventory management</a></li>
+        <li><a href="sales.html">sales management</a></li>
+        <li><a href="finance.html">finance</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>assign products to categories</h2>
+
+    <!-- total weight of blueberries -->
+    <h3>total blueberry weight: <span id="totalWeight">0</span> kg</h3>
+
+
+    <form id="addProductForm">
+      <input type="text" id="productName" placeholder="product name" required>
+      <input type="number" id="productWeight" placeholder="weight (g)" required>
+      <div id="premiumOptions" style="display: none;">
+        <label for="premiumWeight">enter custom weight (g):</label>
+        <input type="number" id="premiumWeight" placeholder="custom weight (g)">
+      </div>
+      <button type="submit">add package</button>
+    </form>
+
+  
+    <h3>product categories</h3>
+    <ul id="categoryList">
+      <li>small (100g): <span id="smallCount">0</span></li>
+      <li>medium (250g): <span id="mediumCount">0</span></li>
+      <li>large (500g): <span id="largeCount">0</span></li>
+      <li>extra large (1kg): <span id="extraLargeCount">0</span></li>
+      <li>family pack (2kg): <span id="familyPackCount">0</span></li>
+      <li>bulk pack (5kg): <span id="bulkPackCount">0</span></li>
+      <li>premium (custom weight): <span id="premiumCount">0</span></li>
+    </ul>
+
+ 
+    <h3>logistics and packing</h3>
+    <button id="generateLogisticsReport">generate logistics report</button>
+    <div id="logisticsReportOutput"></div>
+
+    
+    <h3>product list</h3>
+    <div id="productList"></div>
+  </main>
+  <footer>
+    <p>© 2024 blueberry factory management system</p>
+  </footer>
+  <script src="categories.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sales Management</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suppliers.html">Supplier Management</a></li>
+        <li><a href="purchases.html">Purchases</a></li>
+        <li><a href="categories.html">Product Categories</a></li>
+        <li><a href="inventory.html">Inventory Management</a></li>
+        <li><a href="sales.html">Sales Management</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Process Sales Orders</h2>
+
+
+    <form id="addOrderForm">
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" placeholder="Enter customer name" required>
+
+      <label for="customerContact">Contact Number:</label>
+      <input type="text" id="customerContact" placeholder="Enter contact number" required>
+
+      <label for="shippingAddress">Shipping Address:</label>
+      <textarea id="shippingAddress" placeholder="Enter shipping address" required></textarea>
+
+      <label for="productCategory">Select Category:</label>
+      <select id="productCategory" required>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Extra Large">Extra Large</option>
+        <option value="Family Pack">Family Pack</option>
+        <option value="Bulk Pack">Bulk Pack</option>
+        <option value="Premium">Premium</option>
+      </select>
+
+      <label for="quantityOrdered">Quantity (Number of Packages):</label>
+      <input type="number" id="quantityOrdered" placeholder="Enter number of packages" required>
+
+     
+      <div id="premiumOptions" style="display: none;">
+        <label for="premiumWeight">Enter Custom Weight for Premium (g):</label>
+        <input type="number" id="premiumWeight" placeholder="Enter weight in grams">
+      </div>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+  
+    <h3>Order List</h3>
+    <div id="orderList"></div>
+  </main>
+  <footer>
+    <p>© 2024 Blueberry Factory Management System</p>
+  </footer>
+  <script src="sales.js" defer></script>
+</body>
+</html>

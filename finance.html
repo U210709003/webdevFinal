@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Financial Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suppliers.html">Supplier Management</a></li>
+        <li><a href="purchases.html">Purchases</a></li>
+        <li><a href="categories.html">Product Categories</a></li>
+        <li><a href="inventory.html">Inventory Management</a></li>
+        <li><a href="sales.html">Sales Management</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Financial Analysis</h2>
+
+    <!-- Tax rate input -->
+    <label for="taxRate">Enter Tax Rate (%):</label>
+    <input type="number" id="taxRate" placeholder="Tax Rate" value="18" required>
+
+    <!-- Analyze button -->
+    <button id="analyzeButton">Analyze Financials</button>
+
+    <!-- Financial report -->
+    <div id="financialReport">
+      <h3>Financial Report</h3>
+      <p><strong>Total Income:</strong> <span id="totalIncome">$0</span></p>
+      <p><strong>Total Expense:</strong> <span id="totalExpense">$0</span></p>
+      <p><strong>Tax Amount:</strong> <span id="taxAmount">$0</span></p>
+      <p><strong>Net Profit:</strong> <span id="netProfit">$0</span></p>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Blueberry Factory Management System</p>
+  </footer>
+  <script src="finance.js" defer></script>
+</body>
+</html>
